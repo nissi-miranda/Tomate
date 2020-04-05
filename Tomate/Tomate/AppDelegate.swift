@@ -11,10 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    static var apiKey = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        guard let dict = Bundle.main.infoDictionary else {
+          fatalError("Plist file not found")
+        }
+        
+        guard let zomatoApiKey = dict["API_KEY"] as? String else {
+          fatalError("API Key not set in plist for this environment")
+        }
+        
+        AppDelegate.apiKey = zomatoApiKey
+        
         return true
     }
 
