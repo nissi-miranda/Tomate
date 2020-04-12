@@ -16,6 +16,8 @@
 		20C5707D243A018B0085DEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C5707B243A018B0085DEE3 /* LaunchScreen.storyboard */; };
 		20C57088243A018B0085DEE3 /* TomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57087243A018B0085DEE3 /* TomateTests.swift */; };
 		20C57093243A018B0085DEE3 /* TomateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57092243A018B0085DEE3 /* TomateUITests.swift */; };
+		20ED839024436B830015D2B7 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202D291E243A3416004B5AC4 /* Debug.xcconfig */; };
+		20ED839124436B9D0015D2B7 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202D291F243A3416004B5AC4 /* Release.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,9 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20ED839024436B830015D2B7 /* Debug.xcconfig in Resources */,
 				20C5707D243A018B0085DEE3 /* LaunchScreen.storyboard in Resources */,
 				20C5707A243A018B0085DEE3 /* Preview Assets.xcassets in Resources */,
 				20C57077243A018B0085DEE3 /* Assets.xcassets in Resources */,
+				20ED839124436B9D0015D2B7 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
