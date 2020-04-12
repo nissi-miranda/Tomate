@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "20C57082243A018B0085DEE3"
+               BuildableName = "TomateTests.xctest"
+               BlueprintName = "TomateTests"
+               ReferencedContainer = "container:Tomate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "20C5708D243A018B0085DEE3"
+               BuildableName = "TomateUITests.xctest"
+               BlueprintName = "TomateUITests"
+               ReferencedContainer = "container:Tomate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
