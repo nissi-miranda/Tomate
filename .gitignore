@@ -14,7 +14,7 @@ xcuserdata/
 *.dSYM
 
 ## App config files
-*.xcconfig
+# *.xcconfig
 
 ## Playgrounds
 timeline.xctimeline
