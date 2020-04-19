@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  MainViewImplementation.swift
 //  Tomate
 //
 //  Created by Nissi Vieira Miranda on 05/04/2020.
@@ -9,13 +9,24 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var presenter = MainViewPresenter()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
+        VStack(spacing: 10) {
+            Text(presenter.pageTitleText)
+            Button(action: {
+                // What to perform
+            }) {
+                Text(presenter.restaurantButtonTitle)
+            }
+            Button(action: {
+                // What to perform
+            }) {
+                Text(presenter.cafeButtonTitle)
+            }
+        }.onAppear(perform: {
+            self.presenter.bodyDidAppear()
+        })
     }
 }

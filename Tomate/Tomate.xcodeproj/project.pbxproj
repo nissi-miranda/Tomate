@@ -16,6 +16,7 @@
 		20C5707D243A018B0085DEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C5707B243A018B0085DEE3 /* LaunchScreen.storyboard */; };
 		20C57088243A018B0085DEE3 /* TomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57087243A018B0085DEE3 /* TomateTests.swift */; };
 		20C57093243A018B0085DEE3 /* TomateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57092243A018B0085DEE3 /* TomateUITests.swift */; };
+		20DA086F244C554700360DD3 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DA086E244C554700360DD3 /* MainViewPresenter.swift */; };
 		20ED839024436B830015D2B7 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202D291E243A3416004B5AC4 /* Debug.xcconfig */; };
 		20ED839124436B9D0015D2B7 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202D291F243A3416004B5AC4 /* Release.xcconfig */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		20C5708E243A018B0085DEE3 /* TomateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C57092243A018B0085DEE3 /* TomateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateUITests.swift; sourceTree = "<group>"; };
 		20C57094243A018B0085DEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DA086E244C554700360DD3 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		20C5706F243A01890085DEE3 /* Tomate */ = {
 			isa = PBXGroup;
 			children = (
+				20DA086C244C54E300360DD3 /* Presenters */,
 				202D2922243A39A3004B5AC4 /* Views */,
 				202D291D243A33E7004B5AC4 /* ConfigFiles */,
 				20C57070243A01890085DEE3 /* AppDelegate.swift */,
@@ -159,6 +162,14 @@
 				20C57094243A018B0085DEE3 /* Info.plist */,
 			);
 			path = TomateUITests;
+			sourceTree = "<group>";
+		};
+		20DA086C244C54E300360DD3 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				20DA086E244C554700360DD3 /* MainViewPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			files = (
 				20C57071243A01890085DEE3 /* AppDelegate.swift in Sources */,
 				202D2921243A399A004B5AC4 /* MainView.swift in Sources */,
+				20DA086F244C554700360DD3 /* MainViewPresenter.swift in Sources */,
 				20C57073243A01890085DEE3 /* SceneDelegate.swift in Sources */,
 				20C57075243A01890085DEE3 /* ContentView.swift in Sources */,
 			);
