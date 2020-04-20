@@ -1,5 +1,5 @@
 //
-//  MainViewImplementation.swift
+//  MainView.swift
 //  Tomate
 //
 //  Created by Nissi Vieira Miranda on 05/04/2020.
@@ -10,20 +10,26 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var presenter = MainViewPresenter()
+    @ObservedObject var state: MainViewState
+    let presenter: MainViewPresenter!
+    
+    init(state: MainViewState) {
+        self.state = state
+        presenter = MainViewPresenterImplementation(state: state)
+    }
     
     var body: some View {
         VStack(spacing: 10) {
-            Text(presenter.pageTitleText)
+            Text(state.pageTitleText)
             Button(action: {
                 // What to perform
             }) {
-                Text(presenter.restaurantButtonTitle)
+                Text(state.restaurantButtonTitle)
             }
             Button(action: {
                 // What to perform
             }) {
-                Text(presenter.cafeButtonTitle)
+                Text(state.cafeButtonTitle)
             }
         }.onAppear(perform: {
             self.presenter.bodyDidAppear()

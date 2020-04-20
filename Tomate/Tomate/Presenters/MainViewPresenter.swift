@@ -6,17 +6,23 @@
 //  Copyright © 2020 Nissi Vieira Miranda. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
-final class MainViewPresenter: ObservableObject {
+protocol MainViewPresenter {
+    func bodyDidAppear()
+}
+
+final class MainViewPresenterImplementation: MainViewPresenter {
     
-    @Published var pageTitleText: String = ""
-    @Published var restaurantButtonTitle: String = ""
-    @Published var cafeButtonTitle: String = ""
+    @ObservedObject var state: MainViewState
+    
+    init(state: MainViewState) {
+        self.state = state
+    }
     
     func bodyDidAppear() {
-        pageTitleText = "Look for places:"
-        restaurantButtonTitle = "Restaurants"
-        cafeButtonTitle = "Cafes"
+        state.display(pageTitleText: "Look for places:")
+        state.display(restaurantButtonTitle: "Restaurants")
+        state.display(cafeButtonTitle: "Cafes")
     }
 }
