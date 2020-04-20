@@ -9,13 +9,30 @@
 import SwiftUI
 
 struct MainView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    @ObservedObject var state: MainViewState
+    let presenter: MainViewPresenter!
+    
+    init(state: MainViewState) {
+        self.state = state
+        presenter = MainViewPresenterImplementation(state: state)
     }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Text(state.pageTitleText)
+            Button(action: {
+                // What to perform
+            }) {
+                Text(state.restaurantButtonTitle)
+            }
+            Button(action: {
+                // What to perform
+            }) {
+                Text(state.cafeButtonTitle)
+            }
+        }.onAppear(perform: {
+            self.presenter.bodyDidAppear()
+        })
     }
 }
