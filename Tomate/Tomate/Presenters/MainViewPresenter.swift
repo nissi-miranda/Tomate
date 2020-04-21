@@ -9,7 +9,11 @@
 import SwiftUI
 
 protocol MainViewPresenter {
-    func bodyDidAppear()
+    func setupPageTitle()
+    func setupRestaurantButton()
+    func setupCafeButton()
+    func setupVStackWidth()
+    func setupVStackHeight()
 }
 
 final class MainViewPresenterImplementation: MainViewPresenter {
@@ -20,9 +24,23 @@ final class MainViewPresenterImplementation: MainViewPresenter {
         self.state = state
     }
     
-    func bodyDidAppear() {
-        state.display(pageTitleText: "Look for places:")
-        state.display(restaurantButtonTitle: "Restaurants")
-        state.display(cafeButtonTitle: "Cafes")
+    func setupPageTitle() {
+        state.pageTitleText = "Look for places:"
+    }
+    
+    func setupRestaurantButton() {
+        state.restaurantButtonTitle = "Restaurants"
+    }
+    
+    func setupCafeButton() {
+        state.cafeButtonTitle = "Cafes"
+    }
+    
+    func setupVStackWidth() {
+        state.vstackWidth = UIScreen.main.bounds.width
+    }
+    
+    func setupVStackHeight() {
+        state.vstackHeight = UIScreen.main.bounds.height/2
     }
 }

@@ -19,20 +19,31 @@ struct MainView: View {
     }
     
     var body: some View {
-        VStack(spacing: 10) {
-            Text(state.pageTitleText)
-            Button(action: {
-                // What to perform
-            }) {
-                Text(state.restaurantButtonTitle)
-            }
-            Button(action: {
-                // What to perform
-            }) {
-                Text(state.cafeButtonTitle)
-            }
+        ZStack(alignment: .topLeading) {
+            
+            Color.init(red: 1, green: 222/255, blue: 3/255).edgesIgnoringSafeArea(.all)
+            
+            Text("JustOrder!").frame(alignment: .leading).padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0)).font(.system(size: 45, weight: .bold, design: .default))
+            
+            VStack {
+                Text(state.pageTitleText)
+                Button(action: {
+                    // What to perform
+                }) {
+                    Text(state.restaurantButtonTitle)
+                }
+                Button(action: {
+                    // What to perform
+                }) {
+                    Text(state.cafeButtonTitle)
+                }
+            }.frame(width: state.vstackWidth, height: state.vstackHeight, alignment: .top)
         }.onAppear(perform: {
-            self.presenter.bodyDidAppear()
+            self.presenter.setupPageTitle()
+            self.presenter.setupRestaurantButton()
+            self.presenter.setupCafeButton()
+            self.presenter.setupVStackWidth()
+            self.presenter.setupVStackHeight()
         })
     }
 }
