@@ -25,25 +25,55 @@ struct MainView: View {
             
             Text("JustOrder!").frame(alignment: .leading).padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0)).font(.system(size: 45, weight: .bold, design: .default))
             
-            VStack {
-                Text(state.pageTitleText)
+            VStack(spacing: 40) {
+                Text(state.pageTitleText).font(.system(size: 25, weight: .regular, design: .default))
+                
                 Button(action: {
                     // What to perform
+                    print("Restaurant button tapped")
                 }) {
-                    Text(state.restaurantButtonTitle)
-                }
+                    VStack {
+                        Image("restaurant")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: nil, height: state.buttonsImageHeight, alignment: .top)
+                        Text(state.restaurantButtonTitle).padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+                            .foregroundColor(Color.black)
+                    }
+                }.frame(width: state.buttonsWidth, height: state.buttonsHeight, alignment: .center)
+                    .background(Color.white)
+                    .clipped()
+                    .cornerRadius(5)
+                    .shadow(radius: 5)
+                
                 Button(action: {
                     // What to perform
+                    print("Cafe button tapped")
                 }) {
-                    Text(state.cafeButtonTitle)
-                }
-            }.frame(width: state.vstackWidth, height: state.vstackHeight, alignment: .top)
+                    VStack {
+                        Image("cafe")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: nil, height: state.buttonsImageHeight, alignment: .top)
+                        Text(state.cafeButtonTitle).padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+                            .foregroundColor(Color.black)
+                    }
+                }.frame(width: state.buttonsWidth, height: state.buttonsHeight, alignment: .center)
+                    .background(Color.white)
+                    .clipped()
+                    .cornerRadius(5)
+                    .shadow(radius: 5)
+                
+            }.frame(width: state.vstackWidth, height: nil, alignment: .top).padding(EdgeInsets(top: 180, leading: 0, bottom: 0, trailing: 0))
+            
         }.onAppear(perform: {
             self.presenter.setupPageTitle()
             self.presenter.setupRestaurantButton()
             self.presenter.setupCafeButton()
             self.presenter.setupVStackWidth()
-            self.presenter.setupVStackHeight()
+            self.presenter.setupButtonsWidth()
+            self.presenter.setupButtonsHeight()
+            self.presenter.setupButtonsImageHeight()
         })
     }
 }

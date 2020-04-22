@@ -14,5 +14,7 @@ class MainViewState: ObservableObject {
     @Published var restaurantButtonTitle: String = ""
     @Published var cafeButtonTitle: String = ""
     @Published var vstackWidth: CGFloat = 0
-    @Published var vstackHeight: CGFloat = 0
+    @Published var buttonsWidth: CGFloat = 0
+    @Published var buttonsHeight: CGFloat = 0
+    @Published var buttonsImageHeight: CGFloat = 0
 }

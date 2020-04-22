@@ -13,7 +13,9 @@ protocol MainViewPresenter {
     func setupRestaurantButton()
     func setupCafeButton()
     func setupVStackWidth()
-    func setupVStackHeight()
+    func setupButtonsWidth()
+    func setupButtonsHeight()
+    func setupButtonsImageHeight()
 }
 
 final class MainViewPresenterImplementation: MainViewPresenter {
@@ -25,7 +27,7 @@ final class MainViewPresenterImplementation: MainViewPresenter {
     }
     
     func setupPageTitle() {
-        state.pageTitleText = "Look for places:"
+        state.pageTitleText = "Pick where to order:"
     }
     
     func setupRestaurantButton() {
@@ -40,7 +42,15 @@ final class MainViewPresenterImplementation: MainViewPresenter {
         state.vstackWidth = UIScreen.main.bounds.width
     }
     
-    func setupVStackHeight() {
-        state.vstackHeight = UIScreen.main.bounds.height/2
+    func setupButtonsWidth() {
+        state.buttonsWidth = UIScreen.main.bounds.width * 0.7
+    }
+    
+    func setupButtonsHeight() {
+        state.buttonsHeight = (UIScreen.main.bounds.width * 0.7) * 0.5
+    }
+    
+    func setupButtonsImageHeight() {
+        state.buttonsImageHeight = (UIScreen.main.bounds.width * 0.7) * 0.42
     }
 }
