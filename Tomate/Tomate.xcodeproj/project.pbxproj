@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202D2921243A399A004B5AC4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D2920243A399A004B5AC4 /* MainView.swift */; };
+		206D87B524544BF500DA1825 /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D87B424544BF500DA1825 /* PlacesListView.swift */; };
 		20C57071243A01890085DEE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57070243A01890085DEE3 /* AppDelegate.swift */; };
 		20C57073243A01890085DEE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57072243A01890085DEE3 /* SceneDelegate.swift */; };
 		20C57075243A01890085DEE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57074243A01890085DEE3 /* ContentView.swift */; };
@@ -43,6 +44,7 @@
 		202D291E243A3416004B5AC4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		202D291F243A3416004B5AC4 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		202D2920243A399A004B5AC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		206D87B424544BF500DA1825 /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
 		20C5706D243A01890085DEE3 /* Tomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C57070243A01890085DEE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C57072243A01890085DEE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				202D2920243A399A004B5AC4 /* MainView.swift */,
+				206D87B424544BF500DA1825 /* PlacesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				20DA087A244E25D100360DD3 /* MainViewState.swift in Sources */,
 				202D2921243A399A004B5AC4 /* MainView.swift in Sources */,
 				20DA086F244C554700360DD3 /* MainViewPresenter.swift in Sources */,
+				206D87B524544BF500DA1825 /* PlacesListView.swift in Sources */,
 				20C57073243A01890085DEE3 /* SceneDelegate.swift in Sources */,
 				20C57075243A01890085DEE3 /* ContentView.swift in Sources */,
 			);

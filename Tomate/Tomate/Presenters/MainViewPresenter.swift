@@ -12,10 +12,7 @@ protocol MainViewPresenter {
     func setupPageTitle()
     func setupRestaurantButton()
     func setupCafeButton()
-    func setupVStackWidth()
-    func setupButtonsWidth()
-    func setupButtonsHeight()
-    func setupButtonsImageHeight()
+    func enableNavigation()
 }
 
 final class MainViewPresenterImplementation: MainViewPresenter {
@@ -38,19 +35,7 @@ final class MainViewPresenterImplementation: MainViewPresenter {
         state.cafeButtonTitle = "Cafes"
     }
     
-    func setupVStackWidth() {
-        state.vstackWidth = UIScreen.main.bounds.width
-    }
-    
-    func setupButtonsWidth() {
-        state.buttonsWidth = UIScreen.main.bounds.width * 0.7
-    }
-    
-    func setupButtonsHeight() {
-        state.buttonsHeight = (UIScreen.main.bounds.width * 0.7) * 0.5
-    }
-    
-    func setupButtonsImageHeight() {
-        state.buttonsImageHeight = (UIScreen.main.bounds.width * 0.7) * 0.42
+    func enableNavigation() {
+        state.canNavigate = true
     }
 }
