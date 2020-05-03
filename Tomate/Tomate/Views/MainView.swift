@@ -17,10 +17,12 @@ struct MainView: View {
     
     @ObservedObject var state: MainViewState
     let presenter: MainViewPresenter!
+    let apiClient: APIClient!
     
     init(state: MainViewState) {
         self.state = state
         presenter = MainViewPresenterImplementation(state: state)
+        apiClient = APIClientImplementation()
         
         UINavigationBar.appearance().tintColor = UIColor.black
         
@@ -86,7 +88,18 @@ struct MainView: View {
     }
     
     private func searchPlace() {
-        presenter.enableNavigation()
+        //presenter.enableNavigation()
+        
+        print("Search started...")
+        
+        let request = BusinessesSearchRequest(type: .restaurants, latitude: 48.864880, longitude: 2.342337, offset: 0)
+        
+        apiClient.send(request, BusinessesSearchResponse.self) {
+            response in
+            
+            print("Search finished")
+            print("Response -> \(response)")
+        }
     }
     
     private func configureView() {

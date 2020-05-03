@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		202D2921243A399A004B5AC4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D2920243A399A004B5AC4 /* MainView.swift */; };
+		20664E092455C26800EB94A7 /* APIClientImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E082455C26800EB94A7 /* APIClientImplementation.swift */; };
+		20664E0C2457702800EB94A7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E0B2457702800EB94A7 /* APIClient.swift */; };
+		20664E0E2457716B00EB94A7 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E0D2457716B00EB94A7 /* APIRequest.swift */; };
+		20664E10245774F700EB94A7 /* APISessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E0F245774F700EB94A7 /* APISessionProtocol.swift */; };
+		20664E13245DB5F800EB94A7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E12245DB5F800EB94A7 /* APIError.swift */; };
+		20664E15245DB8BB00EB94A7 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E14245DB8BB00EB94A7 /* HttpMethods.swift */; };
+		20664E17245DB9A700EB94A7 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E16245DB9A700EB94A7 /* PlaceType.swift */; };
+		20664E19245EF76300EB94A7 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E18245EF76300EB94A7 /* APIResponse.swift */; };
+		20664E1D245F236900EB94A7 /* BusinessesSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E1C245F236900EB94A7 /* BusinessesSearchRequest.swift */; };
+		20664E20245F275200EB94A7 /* BusinessesSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20664E1F245F275200EB94A7 /* BusinessesSearchResponse.swift */; };
 		206D87B524544BF500DA1825 /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D87B424544BF500DA1825 /* PlacesListView.swift */; };
 		20C57071243A01890085DEE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57070243A01890085DEE3 /* AppDelegate.swift */; };
 		20C57073243A01890085DEE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57072243A01890085DEE3 /* SceneDelegate.swift */; };
@@ -44,6 +54,16 @@
 		202D291E243A3416004B5AC4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		202D291F243A3416004B5AC4 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		202D2920243A399A004B5AC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		20664E082455C26800EB94A7 /* APIClientImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImplementation.swift; sourceTree = "<group>"; };
+		20664E0B2457702800EB94A7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		20664E0D2457716B00EB94A7 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		20664E0F245774F700EB94A7 /* APISessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionProtocol.swift; sourceTree = "<group>"; };
+		20664E12245DB5F800EB94A7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		20664E14245DB8BB00EB94A7 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		20664E16245DB9A700EB94A7 /* PlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
+		20664E18245EF76300EB94A7 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		20664E1C245F236900EB94A7 /* BusinessesSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesSearchRequest.swift; sourceTree = "<group>"; };
+		20664E1F245F275200EB94A7 /* BusinessesSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesSearchResponse.swift; sourceTree = "<group>"; };
 		206D87B424544BF500DA1825 /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
 		20C5706D243A01890085DEE3 /* Tomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C57070243A01890085DEE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +126,62 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		20664E072455C21500EB94A7 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				20664E1E245F271300EB94A7 /* Responses */,
+				20664E1B245F233500EB94A7 /* Requests */,
+				20664E11245DB4F200EB94A7 /* Utils */,
+				20664E0A2457700C00EB94A7 /* Protocols */,
+				20664E082455C26800EB94A7 /* APIClientImplementation.swift */,
+			);
+			path = "API Client";
+			sourceTree = "<group>";
+		};
+		20664E0A2457700C00EB94A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				20664E0B2457702800EB94A7 /* APIClient.swift */,
+				20664E0D2457716B00EB94A7 /* APIRequest.swift */,
+				20664E0F245774F700EB94A7 /* APISessionProtocol.swift */,
+				20664E18245EF76300EB94A7 /* APIResponse.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		20664E11245DB4F200EB94A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20664E12245DB5F800EB94A7 /* APIError.swift */,
+				20664E14245DB8BB00EB94A7 /* HttpMethods.swift */,
+				20664E16245DB9A700EB94A7 /* PlaceType.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		20664E1A245F219B00EB94A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		20664E1B245F233500EB94A7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				20664E1C245F236900EB94A7 /* BusinessesSearchRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		20664E1E245F271300EB94A7 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				20664E1F245F275200EB94A7 /* BusinessesSearchResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		20C57064243A01890085DEE3 = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +205,10 @@
 		20C5706F243A01890085DEE3 /* Tomate */ = {
 			isa = PBXGroup;
 			children = (
-				20DA0878244E25BD00360DD3 /* States */,
+				20664E072455C21500EB94A7 /* API Client */,
+				20664E1A245F219B00EB94A7 /* Services */,
 				20DA086C244C54E300360DD3 /* Presenters */,
+				20DA0878244E25BD00360DD3 /* States */,
 				202D2922243A39A3004B5AC4 /* Views */,
 				202D291D243A33E7004B5AC4 /* ConfigFiles */,
 				20C57070243A01890085DEE3 /* AppDelegate.swift */,
@@ -320,12 +398,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C57071243A01890085DEE3 /* AppDelegate.swift in Sources */,
+				20664E17245DB9A700EB94A7 /* PlaceType.swift in Sources */,
 				20DA087A244E25D100360DD3 /* MainViewState.swift in Sources */,
 				202D2921243A399A004B5AC4 /* MainView.swift in Sources */,
+				20664E10245774F700EB94A7 /* APISessionProtocol.swift in Sources */,
+				20664E092455C26800EB94A7 /* APIClientImplementation.swift in Sources */,
+				20664E13245DB5F800EB94A7 /* APIError.swift in Sources */,
 				20DA086F244C554700360DD3 /* MainViewPresenter.swift in Sources */,
+				20664E19245EF76300EB94A7 /* APIResponse.swift in Sources */,
 				206D87B524544BF500DA1825 /* PlacesListView.swift in Sources */,
+				20664E20245F275200EB94A7 /* BusinessesSearchResponse.swift in Sources */,
 				20C57073243A01890085DEE3 /* SceneDelegate.swift in Sources */,
+				20664E1D245F236900EB94A7 /* BusinessesSearchRequest.swift in Sources */,
 				20C57075243A01890085DEE3 /* ContentView.swift in Sources */,
+				20664E0E2457716B00EB94A7 /* APIRequest.swift in Sources */,
+				20664E15245DB8BB00EB94A7 /* HttpMethods.swift in Sources */,
+				20664E0C2457702800EB94A7 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
